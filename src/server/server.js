@@ -3,7 +3,7 @@ const express = require('express')
 const app = express()
 
 app.get('/', (req, res) => {
-  res.json({ hello: 'World' })
+  res.json({ hello: 'World....' })
 })
 
 app.get('/users/:id', (req, res) => {
@@ -18,6 +18,10 @@ app.get('/users/:id', (req, res) => {
 app.get('/companies', (req, res) => {
   // parametros query. Ejemplo /companies?hola=true
   res.json({ name: req.query.name })
+})
+
+app.get('/victor', (req, res) => {
+  res.json({name: 'Mi nombre es :'})
 })
 
 app.listen(3005, () => {
